@@ -121,7 +121,7 @@ md5sum TEST RECV
 
 ![DDR4 ByteLane Testing](img/DDR4_ByteLane_Testing.png)
 
-Afterwards, enable the Innova-2 Flex Image and load the next bitstream.
+Afterwards, enable the Innova-2 Flex Image, reboot, and load the next bitstream.
 ```Shell
 sudo mst start
 cd ~/Innova_2_Flex_Open_18_12/driver/
@@ -203,7 +203,7 @@ Begin by `source`ing the [innova2_xcku15p_ddr4_bram_gpio](https://github.com/mwr
 
 ![DDR4 Basic Options](img/DDR4-1400_MT40A1G16WBU-083E_Basic_Configuration.png)
 
-Select the option to enable Debug Signals under Advanced Options in the DDR4 IP Customizer.
+Select the option to enable Debug Signals under Advanced Options in the DDR4 IP Customizer and click Accept to finish.
 
 ![Enable Debug Signals](img/ddr4_0_ex_Enable_Debug_Signals.png)
 
@@ -219,5 +219,5 @@ Update the Constraints File *example_design.xdc* with the contents of the includ
 
 ![Invert sys_rst](img/ddr4_0_ex_Inverted_PCIe_Reset_for_sys_rst.png)
 
-
+Click Generate Bitstream and wait for your design to build.
 
