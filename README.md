@@ -155,7 +155,7 @@ echo 760c27b828931cadabc7dd4af73bb291 should be md5sum of innova2_ddr4_8bit_byte
 echo d80db60d583ea83db4101dfdb6890832 should be md5sum of innova2_ddr4_8bit_byte-lane-6_secondary.bin
 ```
 
-The 16bit-wide 2GB versions of the DDR4 interface must use Byte Lanes from Bank 67 and Bank 68. Banks used must be contiguous. You cannot skip Bank 67 and use Banks 66 and 68. Bank 67 must be used for Bank 68 Byte Lanes to be tested. To cut down on the number of byte-lane combinations I use Byte Lane 3 from Bank 67 to test Bank 68 lanes. If your board fails the 8bit Byte-Lane-3 bitstream above then choose a different, working byte lane from Bank66 and create new bitstreams. `source` one of the `ddr4_8bit` *.tcl* files in *Vivado* and edit the constraints `.xdc` file appropriately.
+The 16bit-wide 2GB versions of the DDR4 interface must use Byte Lanes from Bank 67 and Bank 68. Banks used must be contiguous. You cannot skip Bank 67 and use Banks 66 and 68. Bank 67 must be used for Bank 68 Byte Lanes to be tested. To cut down on the number of byte-lane combinations I use Byte Lane 3 from Bank 67 to test Bank 68 lanes. If your board fails the 8bit Byte-Lane-3 bitstream above then choose a different, working byte lane from Bank66 and create new bitstreams. `source` one of the `ddr4_8bit` [.tcl](project_tcl) files in *Vivado* and edit the constraints `.xdc` file appropriately.
 
 ```Shell
 unzip innova2_ddr4_16bit_byte-lanes-1-3_bitstream.zip ; md5sum *bin
