@@ -1,0 +1,1910 @@
+{
+    "ltx_root": {
+        "version": 4,
+        "minor": 0,
+        "ltx_data": [
+            {
+                "name": "EDA_PROBESET",
+                "active": true,
+                "debug_cores": [
+                    {
+                        "type": "XSDB_V3",
+                        "name": "dbg_hub",
+                        "spec": "labtools_xsdbm_v3",
+                        "clk_input_freq_hz": "43767505"
+                    },
+                    {
+                        "type": "XSDBS_V2",
+                        "name": "u_ddr4_0",
+                        "spec": "labtools_xsdbslavelib_v2",
+                        "ipName": "DDR4_SDRAM",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 0,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "3FD6D9342C58576C8B8336D6FDF59D81"
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "u_ila_ddrx",
+                        "spec": "labtools_ila_v6",
+                        "ipName": "ila",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "7586FC3E48705A38B348E47D97AD2982",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 0,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "dbg_init_calib_complete",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 1,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "dbg_data_compare_error",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 2,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 63,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "dbg_expected_data",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_expected_data[63]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[62]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[61]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[60]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[59]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[58]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[57]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[56]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[55]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[54]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[53]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[52]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[51]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[50]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[49]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[48]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[47]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[46]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[45]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[44]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[43]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[42]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[41]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[40]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[39]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[38]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[37]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[36]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[35]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[34]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[33]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[32]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[31]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[30]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[29]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[28]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[27]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[26]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[25]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[24]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[23]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[22]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[21]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[20]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[19]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[18]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[17]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[16]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[15]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[14]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[13]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[12]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[11]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[10]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[9]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[8]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[7]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[6]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[5]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[4]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[3]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[2]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[1]"
+                                            },
+                                            {
+                                                "name": "dbg_expected_data[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 63,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "dbg_rd_data_cmp",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_rd_data_cmp[63]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[62]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[61]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[60]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[59]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[58]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[57]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[56]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[55]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[54]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[53]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[52]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[51]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[50]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[49]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[48]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[47]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[46]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[45]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[44]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[43]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[42]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[41]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[40]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[39]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[38]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[37]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[36]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[35]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[34]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[33]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[32]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[31]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[30]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[29]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[28]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[27]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[26]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[25]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[24]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[23]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[22]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[21]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[20]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[19]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[18]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[17]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[16]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[15]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[14]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[13]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[12]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[11]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[10]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[9]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[8]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[7]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[6]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[5]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[4]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[3]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[2]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[1]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data_cmp[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "id": 4,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 2,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "dbg_cal_seq",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_cal_seq[2]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq[1]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 5,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "dbg_cal_seq_cnt",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_cal_seq_cnt[31]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[30]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[29]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[28]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[27]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[26]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[25]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[24]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[23]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[22]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[21]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[20]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[19]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[18]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[17]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[16]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[15]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[14]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[13]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[12]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[11]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[10]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[9]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[8]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[7]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[6]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[5]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[4]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[3]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[2]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[1]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_cnt[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe6",
+                                "id": 6,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "dbg_cal_seq_rd_cnt",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_cal_seq_rd_cnt[7]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_rd_cnt[6]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_rd_cnt[5]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_rd_cnt[4]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_rd_cnt[3]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_rd_cnt[2]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_rd_cnt[1]"
+                                            },
+                                            {
+                                                "name": "dbg_cal_seq_rd_cnt[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 7,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "dbg_rd_valid",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 5,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "dbg_cmp_byte",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_cmp_byte[5]"
+                                            },
+                                            {
+                                                "name": "dbg_cmp_byte[4]"
+                                            },
+                                            {
+                                                "name": "dbg_cmp_byte[3]"
+                                            },
+                                            {
+                                                "name": "dbg_cmp_byte[2]"
+                                            },
+                                            {
+                                                "name": "dbg_cmp_byte[1]"
+                                            },
+                                            {
+                                                "name": "dbg_cmp_byte[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 9,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 63,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "dbg_rd_data",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_rd_data[63]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[62]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[61]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[60]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[59]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[58]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[57]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[56]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[55]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[54]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[53]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[52]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[51]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[50]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[49]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[48]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[47]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[46]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[45]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[44]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[43]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[42]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[41]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[40]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[39]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[38]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[37]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[36]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[35]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[34]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[33]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[32]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[31]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[30]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[29]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[28]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[27]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[26]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[25]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[24]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[23]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[22]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[21]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[20]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[19]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[18]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[17]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[16]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[15]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[14]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[13]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[12]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[11]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[10]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[9]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[8]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[7]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[6]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[5]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[4]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[3]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[2]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[1]"
+                                            },
+                                            {
+                                                "name": "dbg_rd_data[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 10,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 15,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "dbg_cplx_config",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_cplx_config[15]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[14]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[13]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[12]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[11]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[10]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[9]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[8]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[7]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[6]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[5]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[4]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[3]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[2]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[1]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_config[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 11,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "dbg_cplx_status",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_cplx_status[1]"
+                                            },
+                                            {
+                                                "name": "dbg_cplx_status[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe12",
+                                "id": 12,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 27,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "dbg_io_address",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_io_address[27]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[26]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[25]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[24]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[23]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[22]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[21]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[20]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[19]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[18]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[17]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[16]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[15]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[14]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[13]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[12]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[11]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[10]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[9]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[8]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[7]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[6]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[5]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[4]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[3]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[2]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[1]"
+                                            },
+                                            {
+                                                "name": "dbg_io_address[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe13",
+                                "id": 13,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 13,
+                                "nets": [
+                                    {
+                                        "name": "dbg_pllGate",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 14,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 19,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "dbg_phy2clb_fixdly_rdy_low",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[19]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[18]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[17]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[16]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[15]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[14]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[13]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[12]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[11]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[10]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[9]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[8]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[7]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[6]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[5]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[4]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[3]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[2]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[1]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_low[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe15",
+                                "id": 15,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 19,
+                                "portIndex": 15,
+                                "nets": [
+                                    {
+                                        "name": "dbg_phy2clb_fixdly_rdy_upp",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[19]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[18]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[17]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[16]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[15]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[14]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[13]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[12]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[11]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[10]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[9]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[8]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[7]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[6]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[5]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[4]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[3]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[2]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[1]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_fixdly_rdy_upp[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 16,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 19,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "dbg_phy2clb_phy_rdy_low",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[19]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[18]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[17]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[16]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[15]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[14]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[13]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[12]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[11]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[10]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[9]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[8]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[7]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[6]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[5]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[4]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[3]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[2]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[1]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_low[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe17",
+                                "id": 17,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 19,
+                                "portIndex": 17,
+                                "nets": [
+                                    {
+                                        "name": "dbg_phy2clb_phy_rdy_upp",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[19]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[18]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[17]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[16]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[15]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[14]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[13]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[12]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[11]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[10]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[9]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[8]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[7]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[6]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[5]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[4]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[3]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[2]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[1]"
+                                            },
+                                            {
+                                                "name": "dbg_phy2clb_phy_rdy_upp[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe18",
+                                "id": 18,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 127,
+                                "portIndex": 18,
+                                "nets": [
+                                    {
+                                        "name": "cal_r0_status",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "cal_r0_status[127]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[126]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[125]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[124]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[123]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[122]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[121]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[120]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[119]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[118]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[117]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[116]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[115]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[114]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[113]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[112]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[111]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[110]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[109]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[108]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[107]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[106]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[105]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[104]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[103]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[102]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[101]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[100]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[99]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[98]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[97]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[96]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[95]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[94]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[93]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[92]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[91]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[90]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[89]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[88]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[87]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[86]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[85]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[84]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[83]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[82]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[81]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[80]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[79]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[78]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[77]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[76]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[75]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[74]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[73]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[72]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[71]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[70]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[69]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[68]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[67]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[66]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[65]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[64]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[63]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[62]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[61]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[60]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[59]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[58]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[57]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[56]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[55]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[54]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[53]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[52]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[51]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[50]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[49]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[48]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[47]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[46]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[45]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[44]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[43]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[42]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[41]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[40]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[39]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[38]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[37]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[36]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[35]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[34]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[33]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[32]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[31]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[30]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[29]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[28]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[27]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[26]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[25]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[24]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[23]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[22]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[21]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[20]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[19]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[18]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[17]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[16]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[15]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[14]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[13]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[12]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[11]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[10]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[9]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[8]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[7]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[6]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[5]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[4]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[3]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[2]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[1]"
+                                            },
+                                            {
+                                                "name": "cal_r0_status[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe19",
+                                "id": 19,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 8,
+                                "portIndex": 19,
+                                "nets": [
+                                    {
+                                        "name": "cal_post_status",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "cal_post_status[8]"
+                                            },
+                                            {
+                                                "name": "cal_post_status[7]"
+                                            },
+                                            {
+                                                "name": "cal_post_status[6]"
+                                            },
+                                            {
+                                                "name": "cal_post_status[5]"
+                                            },
+                                            {
+                                                "name": "cal_post_status[4]"
+                                            },
+                                            {
+                                                "name": "cal_post_status[3]"
+                                            },
+                                            {
+                                                "name": "cal_post_status[2]"
+                                            },
+                                            {
+                                                "name": "cal_post_status[1]"
+                                            },
+                                            {
+                                                "name": "cal_post_status[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
