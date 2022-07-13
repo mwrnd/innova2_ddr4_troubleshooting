@@ -199,7 +199,7 @@ I then tested 64-Bit versions of the DDR4 memory interface without Byte Lane 1 a
 
 The included [ddr4_0_ex_example_design.xdc](ddr4_0_ex/ddr4_0_ex_example_design.xdc) constraints file has the correct pin mappings when creating the DDR4 Example Design using **Vivado 2021.2**.
 
-Begin by `source`ing the [innova2_xcku15p_ddr4_bram_gpio](https://github.com/mwrnd/innova2_xcku15p_ddr4_bram_gpio#recreating-the-design-in-vivado) project and editing the DDR4 options to slower memory speeds (**1428**ps) and the built-in IC configuration (**MT40A1G16WBU-083E**). Set *CAS Latency* to the highest value.
+Begin by `source`ing the [innova2_xcku15p_ddr4_bram_gpio](https://github.com/mwrnd/innova2_xcku15p_ddr4_bram_gpio#recreating-the-design-in-vivado) project. Open the Block Design and edit the DDR4 options to slower memory speeds (**1428**ps) and the built-in IC configuration (**MT40A1G16WBU-083E**). Set *CAS Latency* to the highest value.
 
 ![DDR4 Basic Options](img/DDR4-1400_MT40A1G16WBU-083E_Basic_Configuration.png)
 
@@ -219,5 +219,5 @@ Update the Constraints File *example_design.xdc* with the contents of the includ
 
 ![Invert sys_rst](img/ddr4_0_ex_Inverted_PCIe_Reset_for_sys_rst.png)
 
-Click Generate Bitstream and wait for your design to build.
+Click *Generate Bitstream* and wait for your design to build.
 
