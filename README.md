@@ -162,7 +162,9 @@ echo 760c27b828931cadabc7dd4af73bb291 should be md5sum of innova2_ddr4_8bit_byte
 echo d80db60d583ea83db4101dfdb6890832 should be md5sum of innova2_ddr4_8bit_byte-lane-6_secondary.bin
 ```
 
-The 16bit-wide 2GB versions of the DDR4 interface must use Byte Lanes from Bank 67 and Bank 68. Banks used must be contiguous. You cannot skip Bank 67 and use Banks 66 and 68. To cut down on the number of byte-lane combinations I use Byte Lane 3 from Bank 67 to test Bank 68 lanes. If your board fails the 8bit Byte-Lane-3 bitstream above then choose a different, working byte lane from Bank66 and create new bitstreams. `source` one of the `ddr4_8bit` [.tcl](project_tcl) files in *Vivado* and edit the constraints `.xdc` file appropriately.
+The 16bit-wide 2GB versions of the DDR4 interface must use Byte Lanes from Bank 67 and Bank 68. Banks used must be contiguous. You cannot skip Bank 67 and use Banks 66 and 68. To cut down on the number of byte-lane combinations I use Byte Lane 3 from Bank 67 to test Bank 68 lanes.
+
+If your board fails the 8bit Byte-Lane-3 bitstream above then choose a different, working byte lane from Bank66 and create new bitstreams by `source`ing one of the `ddr4_8bit` [.tcl](project_tcl) files in *Vivado* and editing the constraints `.xdc` file appropriately.
 
 ```Shell
 unzip innova2_ddr4_16bit_byte-lanes-1-3_bitstream.zip ; md5sum *bin
@@ -222,7 +224,7 @@ After Vivado generates the Example Design, confirm the *Integrated Logic Analyze
 
 ![Confirm ILA is present](img/Confirm_ILA_Is_Present.png)
 
-Update the Constraints File *example_design.xdc* with the contents of the included [ddr4_0_ex_example_design.xdc](ddr4_0_ex_example_design.xdc) file. Also, the `sys_rst` signal must be inverted in *example_top.sv*.
+The `sys_rst` signal must be inverted in *example_top.sv*. Also, update the Constraints File *example_design.xdc* with the contents of the included [ddr4_0_ex_example_design.xdc](ddr4_0_ex_example_design.xdc) file.
 
 ![Invert sys_rst](img/ddr4_0_ex_invert_sys_rst_and_copy_over_xdc.png)
 
