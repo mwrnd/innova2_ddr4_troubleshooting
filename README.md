@@ -1,10 +1,16 @@
 # Innova-2 XCKU15P FPGA DDR4 Troubleshooting
 
-![DDR4 Memory ICs](img/DDR4_ICs.png)
+The Innova-2 Flex [MNV303212A-AD**L**T](https://docs.nvidia.com/networking/display/Innova2Flex/Specifications) has five [MT40A1G16](https://www.micron.com/products/dram/ddr4-sdram/part-catalog/mt40a1g16knr-075) DDR4 ICs with **D9WFR** [FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9WFR#pnlFBGA) on the board for **8GB** of DDR4.
+
+![DDR4 Memory ICs on MNV303212A-ADLT](img/DDR4_ICs.png)
+
+I have seen a MNV303212A-AD**I**T in the wild which has **MT40A512M16** DDR4 ICs with **D9TBK** [FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9TBK#pnlFBGA). The rest of the board looks the same so it would have **4GB** of DDR4. Unfortunately none of the designs in my repositories would work with this board. All designs would need to be recompiled for the *MT40A512M16JY-083E:B*. I do not have access to such a board for testing.
+
+![DDR4 Memory ICs on MNV303212A-ADIT](img/MNV303212A-ADIT_has_D9TBK_DDR4.png)
 
 ## DDR4 Communication Error
 
-If you attempt to send data to the DDR4 address but get `write file: Unknown error 512` it likely means DDR4 did not initialize properly. Start by performing a cold reboot and checking communication again. The [innova2_xcku15p_ddr4_bram_gpio](https://github.com/mwrnd/innova2_xcku15p_ddr4_bram_gpio) project and all troubleshooting bitstreams have DDR4 at address `0x0` but if you made any changes to the design confirm in the *Vivado Block Design Address Editor* that it is still `0x0`.
+If you attempt to send data to the DDR4 address but get `write file: Unknown error 512` it likely means DDR4 did not initialize properly. Start by performing a cold reboot and checking communication again. The [innova2_xcku15p_ddr4_bram_gpio](https://github.com/mwrnd/innova2_xcku15p_ddr4_bram_gpio) project and all troubleshooting bitstreams have DDR4 at address `0x0` but if you made any changes to the design confirm in the *Vivado* **Block Design** *Address Editor* that it is still `0`.
 
 ![Confirm Address is Correct](img/Address_Map_Layout.png)
 
@@ -44,9 +50,9 @@ Open Target and Auto Connect.
 
 ![Open Target and Auto Connect](img/Hardware_Manager_AutoConnect.png)
 
-Click on *MIG_1* to view DDR4 calibration status.
+Click on *MIG_1* to view DDR4 calibration status. I do not know if the *ddr4_0_ex* design continues testing past the first fault. Byte Lane 1 is shown to have a fault.
 
-![DDR4 JTAG CAL FAIL](img/DDR4_CAL_Fail_Write_Leveling.png)
+![DDR4 JTAG CAL FAIL](img/DDR4_CAL_FAIL_Flex_Image_MIG_Lists_Broken_Byte_Lane.png)
 
 I encountered a *Write Leveling* failure.
 
@@ -109,6 +115,7 @@ After loading the bitstream as the Innova-2's User Image and rebooting, run the 
 ```Shell
 cd ~/dma_ip_drivers/XDMA/linux-kernel/tools/
 dd if=/dev/urandom bs=8192 count=1 of=TEST
+echo -n -e "\xff" >ff.bin  ;  echo -n -e "\x00" >00.bin
 sudo ./dma_to_device   --verbose --device /dev/xdma0_h2c_0 --address 0x200100000 --size 8192 -f     TEST
 sudo ./dma_from_device --verbose --device /dev/xdma0_c2h_0 --address 0x200100000 --size 8192 --file RECV
 sudo ./dma_to_device   --verbose --device /dev/xdma0_h2c_0 --address 0x200110000 --size 1    -f     ff.bin
@@ -155,7 +162,7 @@ echo 760c27b828931cadabc7dd4af73bb291 should be md5sum of innova2_ddr4_8bit_byte
 echo d80db60d583ea83db4101dfdb6890832 should be md5sum of innova2_ddr4_8bit_byte-lane-6_secondary.bin
 ```
 
-The 16bit-wide 2GB versions of the DDR4 interface must use Byte Lanes from Bank 67 and Bank 68. Banks used must be contiguous. You cannot skip Bank 67 and use Banks 66 and 68. Bank 67 must be used for Bank 68 Byte Lanes to be tested. To cut down on the number of byte-lane combinations I use Byte Lane 3 from Bank 67 to test Bank 68 lanes. If your board fails the 8bit Byte-Lane-3 bitstream above then choose a different, working byte lane from Bank66 and create new bitstreams. `source` one of the `ddr4_8bit` [.tcl](project_tcl) files in *Vivado* and edit the constraints `.xdc` file appropriately.
+The 16bit-wide 2GB versions of the DDR4 interface must use Byte Lanes from Bank 67 and Bank 68. Banks used must be contiguous. You cannot skip Bank 67 and use Banks 66 and 68. To cut down on the number of byte-lane combinations I use Byte Lane 3 from Bank 67 to test Bank 68 lanes. If your board fails the 8bit Byte-Lane-3 bitstream above then choose a different, working byte lane from Bank66 and create new bitstreams. `source` one of the `ddr4_8bit` [.tcl](project_tcl) files in *Vivado* and edit the constraints `.xdc` file appropriately.
 
 ```Shell
 unzip innova2_ddr4_16bit_byte-lanes-1-3_bitstream.zip ; md5sum *bin
@@ -211,13 +218,15 @@ Right-click on the DDR4 Block and choose *Open IP Example Design*.
 
 ![Open IP Example Design](img/Vivado_Open_IP_Example_Design.png)
 
-After Vivado generates the Example Design, confirm the *Integrated Logic Analyzer (ILA)* is present in the design.
+After Vivado generates the Example Design, confirm the *Integrated Logic Analyzer (ILA)* is present in the design. If not, confirm *Debug Signals* were enabled and saved and try again.
 
 ![Confirm ILA is present](img/Confirm_ILA_Is_Present.png)
 
 Update the Constraints File *example_design.xdc* with the contents of the included [ddr4_0_ex_example_design.xdc](ddr4_0_ex_example_design.xdc) file. Also, the `sys_rst` signal must be inverted in *example_top.sv*.
 
-![Invert sys_rst](img/ddr4_0_ex_Inverted_PCIe_Reset_for_sys_rst.png)
+![Invert sys_rst](img/ddr4_0_ex_invert_sys_rst_and_copy_over_xdc.png)
 
-Click *Generate Bitstream* and wait for your design to build.
+Click *Generate Bitstream* and wait for your design to build which takes about 40 minutes.
+
+![Synthesis and Implementation Duration](img/synth_and_impl_duration_z1d-large.png)
 
