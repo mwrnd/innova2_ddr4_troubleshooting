@@ -4,7 +4,7 @@ The Innova-2 Flex [MNV303212A-AD**L**T](https://docs.nvidia.com/networking/displ
 
 ![DDR4 Memory ICs on MNV303212A-ADLT](img/DDR4_ICs.png)
 
-I have seen an [MNV303212A-AD**I**T](https://network.nvidia.com/pdf/eol/LCR-000437.pdf) variant in the wild and a MNV303212A-AD**A**T variant exists. This board has **MT40A512M16** DDR4 ICs with **D9TBK** [FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9TBK#pnlFBGA). The rest of the board looks the same so it would have **4GB** of DDR4. Unfortunately none of the designs in my repositories would work with this **D9TBK**-based board. All designs would need to be recompiled for the *MT40A512M16JY-083E:B*. I do not have access to such a board for testing.
+I have seen an [MNV303212A-AD**I**T](https://network.nvidia.com/pdf/eol/LCR-000437.pdf) variant in the wild and an MNV303212A-AD**A**T variant exists. This board has **MT40A512M16** DDR4 ICs with **D9TBK** [FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9TBK#pnlFBGA). This board has **4GB** of DDR4. Unfortunately none of the designs in my repositories would work with this **MT40A512M16**-based board. All designs would need to be recompiled for the *MT40A512M16JY-083E:B*. I do not have access to such a board for testing.
 
 ![DDR4 Memory ICs on MNV303212A-ADIT](img/MNV303212A-ADIT_has_D9TBK_DDR4.png)
 
