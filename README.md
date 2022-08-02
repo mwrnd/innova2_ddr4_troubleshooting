@@ -1,10 +1,19 @@
 # Innova-2 XCKU15P FPGA DDR4 Troubleshooting
 
+# Table of Contents
+
+ * [DDR4 Communication Error](#ddr4-communication-error)
+    * [Load the ddr4_0_ex Bitstream and Connect JTAG](#load-the-ddr4_0_ex-bitstream-and-connect-jtag)
+    * [CAL FAIL Write Leveling](#cal-fail-write-leveling)
+       * [Test the Various Byte Lane Combinations](#test-the-various-byte-lane-combinations)
+ * [Recreating ddr4_0_ex Example Design](#recreating-ddr4_0_ex-example-design)
+
+
 The Innova-2 Flex [MNV303212A-AD**L**T](https://docs.nvidia.com/networking/display/Innova2Flex/Specifications) has five [MT40A1G16](https://www.micron.com/products/dram/ddr4-sdram/part-catalog/mt40a1g16knr-075) DDR4 ICs with **D9WFR** [FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9WFR#pnlFBGA) on the board for **8GB** of DDR4.
 
 ![DDR4 Memory ICs on MNV303212A-ADLT](img/DDR4_ICs.png)
 
-I have seen an [MNV303212A-AD**I**T](https://network.nvidia.com/pdf/eol/LCR-000437.pdf) variant in the wild and an MNV303212A-AD**A**T variant exists. This board has **MT40A512M16** DDR4 ICs with **D9TBK** [FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9TBK#pnlFBGA). This board has **4GB** of DDR4. Unfortunately none of the designs in my repositories would work with this **MT40A512M16**-based board. All designs would need to be recompiled for the *MT40A512M16JY-083E:B*. I do not have access to such a board for testing.
+I have seen an [MNV303212A-AD**I**T](https://network.nvidia.com/pdf/eol/LCR-000437.pdf) variant in the wild and an MNV303212A-AD**A**T variant exists. This board has **MT40A512M16** DDR4 ICs with **D9TBK** [FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9TBK#pnlFBGA) for **4GB** of total DDR4. Unfortunately, all of the designs in my repositories would need to be recompiled for the **MT40A512M16**, likely *MT40A512M16JY-083E:B*. I do not have access to such a board for testing.
 
 ![DDR4 Memory ICs on MNV303212A-ADIT](img/MNV303212A-ADIT_has_D9TBK_DDR4.png)
 
