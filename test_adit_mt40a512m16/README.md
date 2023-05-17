@@ -22,7 +22,7 @@ The size of addressable memory then had to be changed in the Address Editor.
 
 ![ADIT MT40A512M16LY ](img/adit_MT40A512M16LY-075_ddr4_8bit_DDR4_Addresses.png)
 
-I recompiled the *innova2_xcku15p_ddr4_bram_gpio* project for these DDR4 ICs, loaded, and [ran through the standard tests](https://github.com/mwrnd/innova2_xcku15p_ddr4_bram_gpio#axi-bram-communication) on my 8GB Innova-2.
+I recompiled the *innova2_xcku15p_ddr4_bram_gpio* project for these DDR4 ICs, loaded the bitstream, and [ran through the standard tests](https://github.com/mwrnd/innova2_xcku15p_ddr4_bram_gpio#axi-bram-communication) on my 8GB Innova-2.
 
 ![ADIT MT40A512M16LY BRAM and GPIO Test](img/adit_MT40A512M16LY-075_ddr4_8bit_BRAM_and_GPIO_Tests.png)
 
