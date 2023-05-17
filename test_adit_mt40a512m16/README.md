@@ -2,7 +2,7 @@
 
 The MNV303212A-AD**I**T and MNV303212A-AD**A**T are [4GB obsolete versions of the Innova-2](https://network.nvidia.com/pdf/eol/LCR-000437.pdf). I do not have access to these boards. [Refer to this issue](https://github.com/mwrnd/innova2_flex_xcku15p_notes/issues/3).
 
-I have seen an MNV303212A-AD**I**T variant for sale on eBay. These boards have **MT40A512M16** DDR4 ICs with **D9TBK** [FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9TBK#pnlFBGA) for **4GB** of DDR4. Using these 4GB variant boards may be as simple as synthesizing and implementing Innova-2 projects with the **MT40A512M16LY-075** as the DDR4 *Memory Part*. This directory contains the [innova2_xcku15p_ddr4_bram_gpio](https://github.com/mwrnd/innova2_xcku15p_ddr4_bram_gpio) project recompiled for the **MT40A512M16LY-075** with only one active DDR4 8-bit byte lane.
+I have seen an MNV303212A-AD**I**T variant for sale on eBay. These boards have [**MT40A512M16**](https://media-www.micron.com/-/media/client/global/documents/products/data-sheet/dram/ddr4/8gb_ddr4_sdram.pdf) DDR4 ICs with [**D9TBK** FBGA Code](https://www.micron.com/support/tools-and-utilities/fbga?fbga=D9TBK#pnlFBGA) for **4GB** of DDR4. Using these 4GB variant boards may be as simple as synthesizing and implementing Innova-2 projects with the **MT40A512M16LY-075** as the DDR4 *Memory Part*. This directory contains the [innova2_xcku15p_ddr4_bram_gpio](https://github.com/mwrnd/innova2_xcku15p_ddr4_bram_gpio) project recompiled for the **MT40A512M16LY-075** with only one active DDR4 8-bit byte lane.
 
 ![DDR4 Memory ICs on MNV303212A-ADIT](../img/MNV303212A-ADIT_has_D9TBK_DDR4.png)
 
